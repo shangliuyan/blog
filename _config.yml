@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Leo Shang的BLOG
-subtitle:
-description:
+title: Leo Shang 的 BLOG
+subtitle: 随笔
+description: 永远年轻, 永远热泪盈眶
 author: Leo Shang
-language: zh-CN
+language: zh-Hans # 简体中文, 详见:https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80
 timezone:
 
 # URL
@@ -71,3 +71,18 @@ deploy:
   type: git
   repository: https://github.com/shangliuyan/shangliuyan.github.io.git
   branch: master        
+
+# 头像地址
+avatar: /uploads/avatar.png 
+
+# 代码高亮主题
+## available: normal | night | night eighties | night blue | night bright
+highlight_theme: night
+
+# 菜单配置
+menu:
+  home: /
+  archives: /archives
+  #categories: /categories
+  tags: /tags
+  #about: /about
