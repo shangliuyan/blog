@@ -120,5 +120,13 @@ sqlalchemy文档完备，具体可点击[Automap](http://docs.sqlalchemy.org/en/
 
 ```python
 
-```
+    from sqlalchemy.ext.automap import automap_base
 
+    AutoBase = automap_base()
+    # reflect the tables
+    AutoBase.prepare(engine, reflect=True)
+    tablename = "record_201406"
+    RecordDao = getattr(AutoBase.classes, tablename)
+
+```
+这样就可以了，很清晰。但是这个方法有一个缺点，*Automap*的映射虽然是自动的，但是只有在启动的时候生效，也就是说如果新建一个数据表，而没有告诉*Automap*，那这个表是找不到的。在实际使用中，可以捕获AttributeError异常，并再次调用`AutoBase.prepare(engine, reflect=True)` 刷新映射关系。
