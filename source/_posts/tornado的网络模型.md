@@ -234,4 +234,4 @@ HTTPConnection负责HTTP协议部分，它的I/O使用iostream，通过iostream 
 
 ## 还有什么
 
-我们看到在tornado中，无论运行什么库，只要涉及I/O，都要注册到ioloop上，这样才能发挥异步I/O的作用，否则tornado也回阻塞。所以tornado会有很多第三方库，所以在实际使用中，我们有必要学习一下第三方库的使用。个人以为如果用了celery，这些都库都可以不用了，通过tornado把任务抛到celery，可以省去学习第三方库的成本。
+我们看到在tornado中，无论运行什么库，只要涉及I/O，都要注册到ioloop上，这样才能发挥异步I/O的作用，否则tornado也会阻塞。所以tornado会有很多第三方库，所以在实际使用中，我们有必要学习一下第三方库的使用。
