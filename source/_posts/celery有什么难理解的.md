@@ -1,6 +1,6 @@
 title: celery有什么难理解的?
-date: 2015-08-04 14:09:06
-tags:
+date: 2015-07-04 14:09:06
+tags: [python, celery]
 ---
 两年前，公司所有的管理后台用的都是django admin，我们遇到一个复杂的需求，需要从django admin调用执行一个大批量处理脚本，并且可以查看执行状态。
 当时不太了解celery，加上时间紧迫，就没敢冒险。简单说说我们当时是怎么做的，我们把这个脚本做成了command line的形式，django使用python的subprocess调用这个命令，为了满足可以查看状态这个需求，我们单独创建了一个任务表，在启动脚本时先插入数据，完成或者异常都更新这条数据状态，这样在django admin里就能看到执行状态了。
